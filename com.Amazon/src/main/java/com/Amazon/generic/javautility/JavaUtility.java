@@ -27,5 +27,24 @@ public class JavaUtility
 		return reqDate;
 		
 	}
+	public String getCurrentTime() {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+		
+		return sdf.format(date);
+		
+	}
+	public int generateRandomNum(int limit) {
+		Random random = new Random();
+		return random.nextInt(limit);
+		
+	}
+	public void pauss(long time) {
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 }

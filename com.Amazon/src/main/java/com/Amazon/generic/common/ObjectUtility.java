@@ -1,5 +1,7 @@
 package com.Amazon.generic.common;
 
+import org.openqa.selenium.WebDriver;
+
 import com.Amazon.generic.excelutility.ReadExcelFile;
 import com.Amazon.generic.javautility.JavaUtility;
 import com.Amazon.generic.listenerutility.Listener;
@@ -12,14 +14,13 @@ public class ObjectUtility implements FrameworkConstant {
 	public ReadpropertyFile propertyobj;
 	public Webdriverutility webdriverobj;
 	public Listener listenerobj;
-	public void objectcreation() 
-	{
-		
-		 excelobj=new ReadExcelFile();
-		javaobj=new JavaUtility();
-		 propertyobj=new ReadpropertyFile();
-		 webdriverobj =new Webdriverutility();
-		 listenerobj=new Listener();
+
+	public void objectcreation() {
+		excelobj = new ReadExcelFile();
+		javaobj = new JavaUtility();
+		propertyobj = new ReadpropertyFile();
+		webdriverobj = new Webdriverutility();
+		listenerobj = new Listener();
 	}
-	
+
 }

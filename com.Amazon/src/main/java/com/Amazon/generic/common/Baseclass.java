@@ -22,27 +22,9 @@ import org.testng.annotations.Parameters;
 
 import com.Amazon.generic.propertyutility.ReadpropertyFile;
 
-public class Baseclass extends ObjectUtility{
-	public static WebDriver driver = null;
-	WebDriver driver1 ;
-	@DataProvider(name ="Registerdata")
-	public String[][] Registerdata()
-	{
-		String[][] data=new String[3][3];
-		data[0][0]="Abhi";
-		data[0][1]="101";
-		data[0][2]="Testing";
-	
-		data[1][0]="vasu";
-		data[1][1]="102";
-		data[1][2]="Devoleper";
-		
-		data[2][0]="ram";
-		data[2][1]="103";
-		data[2][2]="finance";
-		
-		return data;	
-	}
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Baseclass extends ObjectUtility {
 
 	@BeforeMethod
 	public void login() {
@@ -54,49 +36,22 @@ public class Baseclass extends ObjectUtility{
 		Reporter.log("Logout Sucessful", true);
 
 	}
-    @Parameters("browser")
+
+	@Parameters("browser")
 	@BeforeClass
 	public void browserSetup(String bname) {
-	
-		// if User gives browsername="chrome"
-		if (bname.equals("chrome"))
-		{
-			// Launch the Browser-Chrome
-			driver = new ChromeDriver();
-		}
-		// if User gives browsername="firefox"
-		else if (bname.equals("firefox")) {
-			// Launch the Browser-Firefox
-			driver = new FirefoxDriver();
-		}
-		// if User gives browsername="edge"
-		else if (bname.equals("edge")) {
-			// Launch the Browser-Edge
-			driver = new EdgeDriver();
-		}
-		else {
-			System.out.println("U have Enter the InValid Browser Name and Im Executing DefaultBrowser ");
-		    driver = new ChromeDriver();
-		}
-		
-//		//Create Object for Property File
-//		ReadpropertyFile p_ref = new ReadpropertyFile();
-		
+
 		// create object for all
 		objectcreation();
-		
-		//Fetch data
-		String	url = propertyobj.readdata("url");
-		
-//			URL = p_ref.readdata("url");
-//			p_ref.displaydata("url");
-//			p_ref.writedata("email", "testing@gmail.com");
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+
+		// launch browser
+		webdriverobj.launchBrowser(bname);
+
+		// Fetch data
+		String url = propertyobj.readdata("url");
 
 		// Navigate to the Application via URL
-		driver.get(url);
+		webdriverobj.navigateToApp(url);
 
 		Reporter.log("BrowserSetup Sucessful", true);
 
@@ -105,7 +60,7 @@ public class Baseclass extends ObjectUtility{
 	@AfterClass
 	public void closebrowser() {
 		// Close The Browser
-		driver.close();
+		webdriverobj.quitAllWindows();
 		Reporter.log("Closebrowser Sucessful", true);
 
 	}

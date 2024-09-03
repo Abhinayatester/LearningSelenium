@@ -12,6 +12,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.Amazon.generic.common.Baseclass;
+import com.Amazon.generic.webdriverutility.Webdriverutility;
 
 public class Listener extends Baseclass implements ITestListener{
 
@@ -29,17 +30,18 @@ public class Listener extends Baseclass implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		String name=result.getName();
 		
-		Reporter.log("TACKING SCREEN SHOT---->"+name,true);
+		Reporter.log("TACKING SCREEN SHOT-STARTED--->"+name,true);
 		//perform typecasting-webdriver to 
-		TakesScreenshot tsref=(TakesScreenshot) driver;
+		TakesScreenshot tsref=(TakesScreenshot)webdriverobj.static_driver;
 		File temp=tsref.getScreenshotAs(OutputType.FILE);
-		File parameter=new File("./src/test/resources/Screenshot/"+name+".png");
+		File parameter=new File("./src/test/resources/Screenshot"+name+".png");
 		try {
 			FileHandler.copy(temp, parameter);
 		} catch (IOException e) {
 			
 			e.printStackTrace();
 		}
+		Reporter.log("TACKING SCREEN SHOT-COMPLITED--->"+name,true);
 	}
 
 	@Override

@@ -1,0 +1,475 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>33/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 23 16:34:14 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>28 seconds (28744 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct5Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct5Test<br/>
+<a href="#Output-465869765" onClick='toggleBox("Output-465869765", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-465869765" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-465869765">
+updateproduct-kids product5 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct5Test@2794eab6</td></tr>
+<tr>
+<td title='com.Amazon.producttest.commonproduct.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.producttest.commonproduct<br/>
+<a href="#Output-520043771" onClick='toggleBox("Output-520043771", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-520043771" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-520043771">
+updateproduct-common product successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.producttest.commonproduct@6c1a5b54</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct5Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct5Test<br/>
+<a href="#Output-1859216983" onClick='toggleBox("Output-1859216983", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1859216983" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1859216983">
+addproduct-kids product5 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct5Test@2794eab6</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct9Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct9Test<br/>
+<a href="#Output-1742633625" onClick='toggleBox("Output-1742633625", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1742633625" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1742633625">
+addproduct-kids product 9successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct9Test@1ffaf86</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct9Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct9Test<br/>
+<a href="#Output-36127072" onClick='toggleBox("Output-36127072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-36127072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-36127072">
+updateproduct-kids product9 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct9Test@1ffaf86</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct7Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct7Test<br/>
+<a href="#Output-401862395" onClick='toggleBox("Output-401862395", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-401862395" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-401862395">
+addproduct-kids product7 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct7Test@45099dd3</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct10Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct10Test<br/>
+<a href="#Output-622043416" onClick='toggleBox("Output-622043416", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-622043416" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-622043416">
+deleteproduct-kids product 10successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct10Test@6574a52c</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct10Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct10Test<br/>
+<a href="#Output-1874919946" onClick='toggleBox("Output-1874919946", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1874919946" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1874919946">
+updateproduct-kids product10 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct10Test@6574a52c</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct5Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct5Test<br/>
+<a href="#Output-478123697" onClick='toggleBox("Output-478123697", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-478123697" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-478123697">
+deleteproduct-kids product5 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct5Test@2794eab6</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct8Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct8Test<br/>
+<a href="#Output-1578026015" onClick='toggleBox("Output-1578026015", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1578026015" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1578026015">
+deleteproduct-kids product 8successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct8Test@13e344d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct4Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct4Test<br/>
+<a href="#Output-247269033" onClick='toggleBox("Output-247269033", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-247269033" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-247269033">
+deleteproduct-kids product4successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct4Test@41a0aa7d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct4Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct4Test<br/>
+<a href="#Output-1994085390" onClick='toggleBox("Output-1994085390", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1994085390" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1994085390">
+updateproduct-kids product4 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct4Test@41a0aa7d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct3Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct3Test<br/>
+<a href="#Output-2034411604" onClick='toggleBox("Output-2034411604", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2034411604" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2034411604">
+deleteproduct-kids product-3 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct3Test@e350b40</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct6Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct6Test<br/>
+<a href="#Output-1453650546" onClick='toggleBox("Output-1453650546", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1453650546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1453650546">
+addproduct-kids product6 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct6Test@6340e5f0</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct6Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct6Test<br/>
+<a href="#Output-2145040140" onClick='toggleBox("Output-2145040140", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2145040140" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2145040140">
+updateproduct-kids product6 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct6Test@6340e5f0</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct1Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct1Test<br/>
+<a href="#Output-1462928549" onClick='toggleBox("Output-1462928549", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1462928549" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1462928549">
+updateproduct-kids product-1 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct1Test@537f60bf</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct7Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct7Test<br/>
+<a href="#Output-767764251" onClick='toggleBox("Output-767764251", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-767764251" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-767764251">
+deleteproduct-kids product7 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct7Test@45099dd3</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct1Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct1Test<br/>
+<a href="#Output-1269819701" onClick='toggleBox("Output-1269819701", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1269819701" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1269819701">
+deleteproduct-kids product-1 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct1Test@537f60bf</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct9Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct9Test<br/>
+<a href="#Output-1409712092" onClick='toggleBox("Output-1409712092", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1409712092" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1409712092">
+deleteproduct-kids product9 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct9Test@1ffaf86</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct3Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct3Test<br/>
+<a href="#Output-1066575950" onClick='toggleBox("Output-1066575950", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1066575950" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1066575950">
+addproduct-kids product-3 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct3Test@e350b40</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct2Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct2Test<br/>
+<a href="#Output-665419272" onClick='toggleBox("Output-665419272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-665419272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-665419272">
+deleteproduct-kids product-2 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct2Test@38cee291</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct10Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct10Test<br/>
+<a href="#Output-2084457242" onClick='toggleBox("Output-2084457242", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2084457242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2084457242">
+addproduct-kids product10 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct10Test@6574a52c</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct2Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct2Test<br/>
+<a href="#Output-1031479068" onClick='toggleBox("Output-1031479068", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1031479068" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1031479068">
+updateproduct-kids product-2 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct2Test@38cee291</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct6Test.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct6Test<br/>
+<a href="#Output-125549276" onClick='toggleBox("Output-125549276", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-125549276" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-125549276">
+deleteproduct-kids product6 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct6Test@6340e5f0</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct8Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct8Test<br/>
+<a href="#Output-1985280051" onClick='toggleBox("Output-1985280051", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1985280051" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1985280051">
+addproduct-kids product 8successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct8Test@13e344d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct1Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct1Test<br/>
+<a href="#Output-1429133319" onClick='toggleBox("Output-1429133319", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1429133319" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1429133319">
+addproduct-kids product-1 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct1Test@537f60bf</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct3Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct3Test<br/>
+<a href="#Output-866370634" onClick='toggleBox("Output-866370634", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-866370634" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-866370634">
+updateproduct-kids product-3 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct3Test@e350b40</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct8Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct8Test<br/>
+<a href="#Output-224473864" onClick='toggleBox("Output-224473864", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-224473864" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-224473864">
+updateproduct-kids product 8successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct8Test@13e344d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct7Test.updateproduct()'><b>updateproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct7Test<br/>
+<a href="#Output-737897289" onClick='toggleBox("Output-737897289", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-737897289" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-737897289">
+updateproduct-kids product7 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct7Test@45099dd3</td></tr>
+<tr>
+<td title='com.Amazon.producttest.commonproduct.deleteproduct()'><b>deleteproduct</b><br>Test class: com.Amazon.producttest.commonproduct<br/>
+<a href="#Output-50173263" onClick='toggleBox("Output-50173263", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-50173263" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-50173263">
+deleteproduct-common product successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.producttest.commonproduct@6c1a5b54</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct4Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct4Test<br/>
+<a href="#Output-795275472" onClick='toggleBox("Output-795275472", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-795275472" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-795275472">
+addproduct-kids product-4 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct4Test@41a0aa7d</td></tr>
+<tr>
+<td title='com.Amazon.kidsproducttest.kidsproduct2Test.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.kidsproducttest.kidsproduct2Test<br/>
+<a href="#Output-1518529528" onClick='toggleBox("Output-1518529528", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1518529528" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1518529528">
+addproduct-kids product-2 successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.kidsproducttest.kidsproduct2Test@38cee291</td></tr>
+<tr>
+<td title='com.Amazon.producttest.commonproduct.addproduct()'><b>addproduct</b><br>Test class: com.Amazon.producttest.commonproduct<br/>
+<a href="#Output-625232315" onClick='toggleBox("Output-625232315", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-625232315" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-625232315">
+addproduct-common product successfully <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Amazon.producttest.commonproduct@6c1a5b54</td></tr>
+</table><p>
+</body>
+</html>

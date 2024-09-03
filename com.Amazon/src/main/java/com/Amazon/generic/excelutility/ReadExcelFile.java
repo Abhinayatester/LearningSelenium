@@ -39,7 +39,14 @@ public class ReadExcelFile implements FrameworkConstant {
 		}
 		
 		String data=w.getSheet(Sheet).getRow(row).getCell(col).getStringCellValue();
-	return data;
+		//close the workbook
+		try {
+			w.close();
+		} catch (IOException e) {
+		
+			e.printStackTrace();
+		}
+		return data;
      }
    
      public void writedata(String Sheet,int row,int col,String data)  
@@ -75,7 +82,6 @@ public class ReadExcelFile implements FrameworkConstant {
 	  try {
 		w.write(fos);
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	  
@@ -83,7 +89,6 @@ public class ReadExcelFile implements FrameworkConstant {
 	  try {
 		w.close();
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	
@@ -113,6 +118,13 @@ public class ReadExcelFile implements FrameworkConstant {
  		
  		//print the data
  		System.out.println(data);
+ 		
+ 		//close the workbook
+ 		  try {
+ 			w.close();
+ 		} catch (IOException e) {
+ 			e.printStackTrace();
+ 		}
      }
      public  void displymultipledata(String Sheet,int col) {
     	//create instance for file output stream
@@ -142,6 +154,13 @@ public class ReadExcelFile implements FrameworkConstant {
  			String data = w.getSheet(Sheet).getRow(i).getCell(col).getStringCellValue();
  			
  			System.out.println(data);
+ 			
+ 			//close the workbook
+ 			  try {
+ 				w.close();
+ 			} catch (IOException e) {
+ 				e.printStackTrace();
+ 			}
  		}
  		
      }

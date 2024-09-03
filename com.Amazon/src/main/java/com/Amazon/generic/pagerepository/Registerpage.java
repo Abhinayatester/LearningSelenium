@@ -15,36 +15,34 @@ public class Registerpage {
 	@FindBy(id="name")
     private WebElement nameTextfield1;
 	
-	public WebElement getName() {
-		return nameTextfield1;	
+	public WebElement getNameTextfield() {
+		return nameTextfield1;
 	}
-	
-	//Address of name label
-	@FindBy(xpath="//label[text()='Name:']")
-	 private  WebElement nameLabel;
-	
+
 	//2.Address of email textfeild
 	@FindBy(id="email")
 	 private  WebElement emailTextfield;
-	
-	//Address of email label
-	@FindBy(xpath="//label[text()='Email:']")
-	 private  WebElement emaillabel1;
-	
+
+	public WebElement getEmailTextfield() {
+		return emailTextfield;
+	}
+
 	//3.Address of password textfeild
 	@FindBy(id="password")
-	 private  WebElement pwdTextfield;
-		
-    //Address of password label
-	@FindBy(xpath="//label[text()='Password:']")
-	 private   WebElement pwdlabel;
-	
+	private  WebElement pwdTextfield;
+	public WebElement getPwdTextfield() {
+		return pwdTextfield;
+	}
+     
 	//4.Address of mobile textfeild
 	@FindBy(id="mobile")
-	 private  WebElement mobTextfield;
-			
-	 //Address of email label
-	@FindBy(xpath="//label[text()='Mobile.no:']")
-	 private  WebElement moblabel;
+    private  WebElement mobileTextfield;
+	public WebElement getMobileTextfield() {
+		return mobileTextfield;
+	}
+	
+		
+ 
+	
 
 }

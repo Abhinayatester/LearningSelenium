@@ -20,72 +20,76 @@ public class RegisterTest extends Baseclass {
 
 	@Test
 	public void createUser_validData() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		// Verify Page Using Assert
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//		try {
+//			Thread.sleep(3000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//
+		//Verify Page Using Assert
 		String exp_title = "LEarning WEB TECHNOLOGY FORMS";
-		String act_title = driver.getTitle();
+		String act_title = webdriverobj.driver.getTitle();
 		System.out.println(act_title);
 		Assert.assertEquals(act_title, exp_title);
 
 		// Create Object for RegisterPage
-//			Registerpage regpage = new Registerpage(driver);
-//			
-//			// Step1:Clear the Name in The Name TextField
-//			regpage.getName().clear();
+    	Registerpage regpage = new Registerpage(webdriverobj.driver);
+			
+		// Step1:Clear the Name in The Name TextField
+		regpage.getNameTextfield().clear();
 
-		WebElement Name = driver.findElement(By.id("name"));
-		Name.clear();
-		WebElement Email = driver.findElement(By.id("email"));
-		WebElement Password = driver.findElement(By.id("password"));
-//			WebElement Mobile = driver.findElement(By.id("password"));
-//			WebElement DOB = driver.findElement(By.id("password"));
-		Name.clear();
-
-		// Create an Object for ExcelUtilityFile class
-		ReadExcelFile excel_f = new ReadExcelFile();
-
-		// Step 2: write the Name in the Name Text Field
-		try {
-			Name.sendKeys(excel_f.readdata("Sheet1", 1, 0));
-			Email.sendKeys(excel_f.readdata("Sheet1", 1, 1));
-			Password.sendKeys(excel_f.readdata("Sheet1", 1, 2));
-//				Mobile.sendKeys(excel_f.readdata("Sheet1", 1, 0));
-//				Name.sendKeys(excel_f.readdata("Sheet1", 1, 0));
-
-		} catch (EncryptedDocumentException e) {
-			e.printStackTrace();
-		} 
-
-		// Step3:Display the Email
-		try {
-			System.out.println(excel_f.readdata("Sheet1", 1, 2));
-		} catch (EncryptedDocumentException e) {
-			e.printStackTrace();
-		} 
-
-		// Step4:Write the Data
-		
-			excel_f.writedata("Sheet1", 2, 1, "Anu21@gmail.com");
-		
-
-		// Execution Completed Message
+		regpage.getNameTextfield().sendKeys("manu");
+		regpage.getEmailTextfield().sendKeys("manuhya@123gmail.com");
+		regpage.getPwdTextfield().sendKeys("MANU@123");
+		regpage.getMobileTextfield().sendKeys("0987654321");
+//		WebElement Name = driver.findElement(By.id("name"));
+//		Name.clear();
+//		WebElement Email = driver.findElement(By.id("email"));
+//		WebElement Password = driver.findElement(By.id("password"));
+////			WebElement Mobile = driver.findElement(By.id("password"));
+////			WebElement DOB = driver.findElement(By.id("password"));
+//		Name.clear();
+//
+//		// Create an Object for ExcelUtilityFile class
+//		ReadExcelFile excel_f = new ReadExcelFile();
+//
+//		// Step 2: write the Name in the Name Text Field
+//		try {
+//			Name.sendKeys(excel_f.readdata("Sheet1", 1, 0));
+//			Email.sendKeys(excel_f.readdata("Sheet1", 1, 1));
+//			Password.sendKeys(excel_f.readdata("Sheet1", 1, 2));
+////				Mobile.sendKeys(excel_f.readdata("Sheet1", 1, 0));
+////				Name.sendKeys(excel_f.readdata("Sheet1", 1, 0));
+//
+//		} catch (EncryptedDocumentException e) {
+//			e.printStackTrace();
+//		} 
+//
+//		// Step3:Display the Email
+//		try {
+//			System.out.println(excel_f.readdata("Sheet1", 1, 2));
+//		} catch (EncryptedDocumentException e) {
+//			e.printStackTrace();
+//		} 
+//
+//		// Step4:Write the Data
+//		
+//			excel_f.writedata("Sheet1", 2, 1, "Anu21@gmail.com");
+//		
+//
+//		// Execution Completed Message
 		Reporter.log("createUser_validData for Register Test", true);
 	}
+//	(dataProvider = "Registerdata")
+//	@Test 
+//	public void createUser_invalidData(String name, String id, String dept) {
+        
+//		System.out.println("Name: " + name);
+//		System.out.println("Id: " + id);
+//		System.out.println("Dep: t" + dept);
+//		Reporter.log("createUser_InvalidData for Register Test", true);
 
-	@Test(dataProvider = "Registerdata")
-	public void createUser_invalidData(String name, String id, String dept) {
-
-		System.out.println("Name: " + name);
-		System.out.println("Id: " + id);
-		System.out.println("Dep: t" + dept);
-		Reporter.log("createUser_InvalidData for Register Test", true);
-
-	}
+	
 
 }
